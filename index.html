@@ -4,22 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - BillDiary</title>
-    <!-- Import a beautiful modern font from Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Privacy Policy for BillDiary - An offline-first, private personal vault for bills, warranties, and subscriptions.">
+    <!-- Modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2563eb;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --primary-light: #eff6ff;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-elevated: #f1f5f9;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+            --success: #10b981;
+            --success-bg: #ecfdf5;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary: #3b82f6;
+                --primary-hover: #60a5fa;
+                --primary-light: #1e3a8a33;
+                --bg: #0b131e;
+                --surface: #141f2d;
+                --surface-elevated: #1a2839;
+                --text-main: #f8fafc;
+                --text-muted: #94a3b8;
+                --border: #24354a;
+                --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+                --success: #34d399;
+                --success-bg: #064e3b33;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.7;
             margin: 0;
             padding: 0;
             display: flex;
@@ -27,72 +58,274 @@
         }
 
         .container {
-            max-width: 800px;
-            margin: 40px 20px;
-            padding: 40px;
-            background-color: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+            max-width: 980px;
+            width: 100%;
+            margin: 30px auto;
+            padding: 36px 28px;
+            background-color: var(--surface);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e2e8f0;
+            margin-bottom: 36px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 14px;
         }
 
         h1 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 700;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+            font-size: 2.25rem;
+            margin: 0 0 10px 0;
+            font-weight: 800;
+            letter-spacing: -0.03em;
         }
 
-        .last-updated {
+        h1 span {
+            color: var(--primary);
+        }
+
+        .meta-bar {
             color: var(--text-muted);
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.92rem;
+            font-weight: 500;
         }
 
         h2 {
-            color: #0f172a;
-            font-size: 1.5rem;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            font-weight: 600;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+            font-size: 1.35rem;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
 
         p, li {
-            color: #334155;
-            font-size: 1.05rem;
-            margin-bottom: 16px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 14px;
         }
 
         ul {
-            padding-left: 20px;
+            padding-left: 22px;
+            margin-bottom: 18px;
         }
 
         li {
             margin-bottom: 8px;
         }
 
-        .highlight {
-            background-color: #eff6ff;
-            padding: 15px;
-            border-left: 4px solid var(--primary-color);
-            border-radius: 0 8px 8px 0;
-            margin: 20px 0;
+        strong {
+            color: var(--text-main);
+            font-weight: 600;
         }
 
-        /* Mobile responsiveness */
-        @media (max-width: 600px) {
+        .highlight-box {
+            background-color: var(--primary-light);
+            padding: 20px 24px;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 14px 14px 0;
+            margin: 24px 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 24px 0;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            text-align: left;
+            min-width: 740px;
+        }
+
+        th {
+            background-color: var(--surface-elevated);
+            color: var(--text-main);
+            font-weight: 700;
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+            white-space: nowrap;
+            font-size: 0.88rem;
+        }
+
+        td {
+            padding: 14px;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-muted);
+            vertical-align: top;
+            line-height: 1.5;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Modern status pill badges */
+        .pill {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 999px;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .pill-blue {
+            background-color: var(--primary-light);
+            color: var(--primary);
+        }
+
+        .pill-green {
+            background-color: var(--success-bg);
+            color: var(--success);
+        }
+
+        .pill-slate {
+            background-color: var(--border);
+            color: var(--text-muted);
+        }
+
+        /* Mobile card view: converts table rows to clean cards */
+        @media (max-width: 680px) {
+            .table-responsive {
+                border: none;
+                overflow: visible;
+                margin: 16px 0;
+            }
+
+            table, thead, tbody, th, td, tr {
+                display: block;
+                min-width: 100%;
+            }
+
+            thead {
+                display: none;
+            }
+
+            tr {
+                background-color: var(--surface-elevated);
+                border: 1px solid var(--border);
+                border-radius: 16px;
+                margin-bottom: 16px;
+                padding: 16px;
+                box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+            }
+
+            td {
+                border: none;
+                padding: 8px 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-size: 0.9rem;
+            }
+
+            td:first-child {
+                font-size: 1.05rem;
+                font-weight: 700;
+                color: var(--text-main);
+                border-bottom: 1px solid var(--border);
+                padding-bottom: 10px;
+                margin-bottom: 8px;
+                display: block;
+            }
+
+            td:last-child {
+                display: block;
+                margin-top: 10px;
+                padding-top: 10px;
+                border-top: 1px dashed var(--border);
+                color: var(--text-muted);
+                font-size: 0.88rem;
+                line-height: 1.5;
+            }
+
+            td:not(:first-child):not(:last-child)::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: var(--text-muted);
+                font-size: 0.82rem;
+            }
+        }
+
+        .card {
+            background-color: var(--surface-elevated);
+            border-radius: 14px;
+            padding: 20px;
+            margin: 18px 0;
+            border: 1px solid var(--border);
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
             .container {
-                margin: 20px 15px;
-                padding: 25px;
+                margin: 12px;
+                padding: 24px 18px;
+                border-radius: 18px;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
+            }
+            h2 {
+                font-size: 1.2rem;
+            }
+            .table-responsive {
+                font-size: 0.85rem;
             }
         }
     </style>
@@ -101,38 +334,152 @@
 
     <div class="container">
         <div class="header">
-            <h1>Privacy Policy for BillDiary</h1>
-            <div class="last-updated">Last Updated: October 2026</div>
+            <span class="badge">🔒 Privacy By Architecture</span>
+            <h1>Privacy Policy for <span>BillDiary</span></h1>
+            <div class="meta-bar">Effective Date: October 2026 • Version 1.0</div>
         </div>
 
-        <p>Welcome to BillDiary. We respect your privacy and are committed to protecting your personal data. This privacy policy informs you about how we handle your data when you use our application.</p>
+        <p>Welcome to <strong>BillDiary</strong>. We believe your financial records, purchase receipts, warranties, and subscription commitments are deeply personal. Our application is engineered from the ground up to be <strong>offline-first</strong> — your data lives securely on your device, not on our servers.</p>
 
-        <h2>1. Information We Collect</h2>
-        <p>Our primary goal is to provide you with a seamless, secure, and bug-free experience. We access and process the following information:</p>
-        <ul>
-            <li><strong>Google Account Information:</strong> We use Google Sign-In to securely authenticate you. We receive your basic profile information (name and email).</li>
-            <li><strong>App Data & Bills:</strong> Information regarding your bills and tracker data that you explicitly enter into the app. This is stored securely on your local device.</li>
-            <li><strong>Camera & Photo Library:</strong> We require access to your camera and photos to scan receipts. This image processing (OCR) is done entirely on your device using Google ML Kit. Images are not uploaded to our servers.</li>
-        </ul>
-
-        <div class="highlight">
-            <strong>Important Note on Google Drive:</strong> If you use our cloud backup feature, BillDiary requests access to your Google Drive. <strong>We do not read, view, or analyze your files.</strong> We only use this permission to safely save your encrypted BillDiary backup file to your own personal Google Drive so you never lose your data.
+        <div class="highlight-box">
+            <p><strong>Our Core Privacy Guarantee:</strong> BillDiary does not operate private user tracking servers. We do not sell, rent, monetize, or harvest your personal bills, receipts, invoices, or bank/payment data.</p>
         </div>
 
-        <h2>2. Third-Party Services, Analytics & Crash Reporting</h2>
-        <p>To ensure the app runs smoothly, we use industry-standard third-party services that may collect anonymous usage data:</p>
+        <h2>1. Architecture & Local Data Storage</h2>
+        <p>BillDiary operates on an offline-first architectural model:</p>
         <ul>
-            <li><strong>Firebase Analytics:</strong> We use Google Firebase to collect anonymous data on how users interact with the app. This helps us understand what features to improve.</li>
-            <li><strong>Sentry (Crashlytics):</strong> If the app crashes, Sentry automatically collects anonymous diagnostic data (like your device model and OS version) to help us find and fix the bug immediately. No personal bill data is sent in these reports.</li>
-            <li><strong>In-App Purchases:</strong> Payments and subscriptions are processed securely by Google Play Billing or Apple App Store. We do not have access to your credit card information.</li>
+            <li><strong>Encrypted Local Database:</strong> All entries you add (merchant names, purchase dates, amounts, categories, warranty expiration dates, and subscription costs) are saved in an encrypted local database (Hive) residing strictly on your device's private sandbox storage.</li>
+            <li><strong>Receipt Photos & Invoices:</strong> Any photo you take with your camera or select from your gallery is saved directly to your device's private app storage.</li>
+            <li><strong>100% On-Device OCR Recognition:</strong> Optical Character Recognition (OCR) for extracting receipt text is performed entirely on your device using Google ML Kit Vision. <strong>Receipt images are never uploaded to any cloud server for scanning or parsing.</strong></li>
+            <li><strong>Biometric Security:</strong> If you enable App Lock (Fingerprint, Touch ID, or Face ID), authentication is performed solely by your mobile device's secure hardware enclave (Android BiometricPrompt / iOS LocalAuthentication). The app never sees, accesses, or stores your biometric markers.</li>
         </ul>
 
-        <h2>3. Data Security & Biometrics</h2>
-        <p>We take your privacy seriously. If you enable App Lock (Biometrics/Face ID/Fingerprint), all authentication happens locally on your device's secure hardware. We do not have access to your biometric data. Furthermore, we do not sell your personal data to any third parties.</p>
+        <h2>2. Google Play Data Safety Disclosures</h2>
+        <p>In accordance with Google Play's Data Safety policies, the following table details every data type processed, whether it is transmitted off-device, and the strict technical purpose for which it is used:</p>
 
-        <h2>4. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy or our privacy practices, please contact us at: <strong>anuj.dev001@gmail.com</strong></p>
+        <div class="table-responsive">
+            <table>
+                <colgroup>
+                    <col style="width: 20%; min-width: 140px;">
+                    <col style="width: 15%; min-width: 100px;">
+                    <col style="width: 12%; min-width: 80px;">
+                    <col style="width: 15%; min-width: 110px;">
+                    <col style="width: 38%; min-width: 260px;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Collected?</th>
+                        <th>Shared?</th>
+                        <th>Encrypted?</th>
+                        <th>Technical Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="Data Type">👤 <strong>Name & Email</strong></td>
+                        <td data-label="Collected?"><span class="pill pill-blue">Yes (Optional)</span></td>
+                        <td data-label="Shared?"><span class="pill pill-slate">No</span></td>
+                        <td data-label="Encrypted?"><span class="pill pill-green">Yes (TLS/HTTPS)</span></td>
+                        <td data-label="Purpose">Optional Google Sign-In to connect personal Google Drive backup.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Data Type">💳 <strong>Purchase History</strong></td>
+                        <td data-label="Collected?"><span class="pill pill-blue">Yes</span></td>
+                        <td data-label="Shared?"><span class="pill pill-slate">No</span></td>
+                        <td data-label="Encrypted?"><span class="pill pill-green">Yes (TLS/HTTPS)</span></td>
+                        <td data-label="Purpose">Processed securely by Google Play Billing / Apple StoreKit to verify Pro subscription status.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Data Type">📊 <strong>App Activity (Interactions)</strong></td>
+                        <td data-label="Collected?"><span class="pill pill-blue">Yes</span></td>
+                        <td data-label="Shared?"><span class="pill pill-slate">No</span></td>
+                        <td data-label="Encrypted?"><span class="pill pill-green">Yes (TLS/HTTPS)</span></td>
+                        <td data-label="Purpose">Anonymous aggregate analytics via Firebase Analytics to monitor app stability and screen navigation.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Data Type">🛠️ <strong>Crash Logs & Diagnostics</strong></td>
+                        <td data-label="Collected?"><span class="pill pill-blue">Yes</span></td>
+                        <td data-label="Shared?"><span class="pill pill-slate">No</span></td>
+                        <td data-label="Encrypted?"><span class="pill pill-green">Yes (TLS/HTTPS)</span></td>
+                        <td data-label="Purpose">Technical crash stack traces via Sentry to diagnose bugs. Contains no financial or receipt content.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Data Type">📱 <strong>Device or Other IDs</strong></td>
+                        <td data-label="Collected?"><span class="pill pill-blue">Yes</span></td>
+                        <td data-label="Shared?"><span class="pill pill-slate">No</span></td>
+                        <td data-label="Encrypted?"><span class="pill pill-green">Yes (TLS/HTTPS)</span></td>
+                        <td data-label="Purpose">Firebase Analytics installation identifier to detect unique active installs.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Data Type">🧾 <strong>Receipt Photos & Docs</strong></td>
+                        <td data-label="Collected?"><span class="pill pill-slate">Local Only</span></td>
+                        <td data-label="Shared?"><span class="pill pill-slate">No</span></td>
+                        <td data-label="Encrypted?"><span class="pill pill-green">On-Device AES</span></td>
+                        <td data-label="Purpose">Stored and processed 100% on-device via ML Kit. Never transmitted to developer or third-party servers.</td>
+                    </tr>
+                    <tr>
+                        <td data-label="Data Type">📍 <strong>Location & Contacts</strong></td>
+                        <td data-label="Collected?"><span class="pill pill-slate">Never</span></td>
+                        <td data-label="Shared?"><span class="pill pill-slate">No</span></td>
+                        <td data-label="Encrypted?"><span class="pill pill-slate">N/A</span></td>
+                        <td data-label="Purpose">BillDiary never requests, accesses, or transmits physical location or contact records.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
+        <h2>3. Third-Party Services & Diagnostics</h2>
+        <p>To deliver high stability, seamless cloud backup, and reliable in-app upgrades, BillDiary incorporates minimal, industry-standard diagnostic and platform SDKs:</p>
+        <ul>
+            <li><strong>Firebase Analytics (Google LLC):</strong> Gathers anonymized telemetry on general app usage. No personal billing records or receipt details are ever transmitted.</li>
+            <li><strong>Sentry (Functional Software, Inc.):</strong> Captures unexpected exceptions, device model, and OS version to enable rapid bug fixes.</li>
+            <li><strong>Google Drive API (Optional Backup):</strong> When you enable cloud backup, BillDiary creates an AES-encrypted archive directly in your own personal Google Drive app data folder. We do not operate intermediate servers, and BillDiary has zero access to any of your other Google Drive files.</li>
+            <li><strong>Google Play Billing / Apple StoreKit:</strong> Digital purchase transactions are handled end-to-end by Google or Apple. BillDiary never receives or stores your credit card numbers or billing details.</li>
+        </ul>
+
+        <h2>4. Device Permissions</h2>
+        <p>BillDiary only requests permissions that are strictly necessary to deliver user-initiated features:</p>
+        <ul>
+            <li><strong>Camera (<code>android.permission.CAMERA</code>):</strong> Used exclusively to take pictures of paper receipts and warranty documents for on-device OCR scanning.</li>
+            <li><strong>Photo Library / Media Images:</strong> Allows you to pick existing receipt photos or PDFs from your gallery.</li>
+            <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Enables scheduled local alarm notifications to alert you before upcoming subscription renewals or expiring warranties.</li>
+            <li><strong>Biometrics (<code>USE_BIOMETRIC</code>):</strong> Enables biometric hardware authentication for instant, secure vault unlock.</li>
+        </ul>
+
+        <h2>5. User Data Deletion & Retention Policy</h2>
+        <p>Because BillDiary does not retain your personal bills on developer servers, you have immediate, sovereign control over all your data at all times:</p>
+        <div class="card">
+            <h3 style="margin-top: 0; font-size: 1.1rem; color: var(--text-main);">How to Delete Your Data:</h3>
+            <ul>
+                <li><strong>Individual Items:</strong> Swipe or tap delete on any bill, receipt image, or subscription to permanently remove it from your device.</li>
+                <li><strong>Complete In-App Wipe:</strong> Open <em>Settings &gt; Data Management</em> to clear all local databases and purge cached images in one tap.</li>
+                <li><strong>Cloud Backup Deletion:</strong> If you created a Google Drive backup, you can delete the backup file directly from within the app settings or via your Google Drive storage management.</li>
+                <li><strong>App Uninstall:</strong> Uninstalling BillDiary automatically and irreversibly deletes all local vault databases and receipt photos from your phone.</li>
+            </ul>
+            <p style="margin-top: 12px; margin-bottom: 0; font-size: 0.95rem; color: var(--text-muted);"><em>Note: Because all records are stored strictly on your local device or your own private Google Drive, all deletions are 100% instant, autonomous, and self-managed without needing server-side requests.</em></p>
+        </div>
+
+        <h2>6. Children's Privacy (COPPA Compliance)</h2>
+        <p>BillDiary is a financial and warranty organization tool intended for adults and young adults (ages 18 and older). It is not directed to children under 13 years of age (or under 16 in the European Economic Area). We do not knowingly collect personal information from children.</p>
+
+        <h2>7. Security Standards</h2>
+        <p>All network communications between the app and third-party APIs (Google OAuth, Sentry, Firebase) are strictly transmitted over industry-standard <strong>TLS 1.2 / TLS 1.3 (HTTPS)</strong> encryption. Local backup archives are protected with AES encryption.</p>
+
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may periodically update this Privacy Policy to reflect app enhancements or evolving store policies. Any changes will be posted to this page with an updated "Effective Date".</p>
+
+        <h2>9. Contact Information</h2>
+        <p>If you have any questions, feedback, or requests concerning this Privacy Policy, please contact our support team:</p>
+        <div class="card">
+            <p style="margin: 0;"><strong>Application:</strong> BillDiary</p>
+            <p style="margin: 6px 0 0 0;"><strong>Support Email:</strong> <a href="mailto:anuj.dev001@gmail.com">anuj.dev001@gmail.com</a></p>
+            <p style="margin: 6px 0 0 0;"><strong>Privacy Policy URL:</strong> <a href="https://anujdev001.github.io/billdiary-privacy/">https://anujdev001.github.io/billdiary-privacy/</a></p>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 BillDiary. All rights reserved. Built with privacy at its core.
+        </div>
     </div>
 
 </body>
